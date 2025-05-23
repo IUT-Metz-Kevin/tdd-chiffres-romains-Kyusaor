@@ -23,6 +23,8 @@ test.each([
   ['III', 3],
   ['VII', 7],
   ['MI', 1001],
+  ['CCXLVIII', 248],
+  ['CDLXXXVII', 487],
 ])('%s should give %s', (input: string, expected: number) => {
   console.log(input, expected);
   const rom = new RomanNumeral();
