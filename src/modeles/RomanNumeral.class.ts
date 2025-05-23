@@ -10,6 +10,14 @@ export class RomanNumeral {
   };
 
   of(value: string): number {
+    const keys = Object.keys(RomanNumeral.Alphabet);
+
+    if (keys.indexOf(value[0]) < keys.indexOf(value[1]))
+      return this.ofChar(value[1]) - this.ofChar(value[0]);
+    else return this.ofChar(value);
+  }
+
+  private ofChar(value: string) {
     return RomanNumeral.Alphabet[value];
   }
 }
