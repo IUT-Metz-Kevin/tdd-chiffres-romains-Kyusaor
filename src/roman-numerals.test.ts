@@ -41,3 +41,23 @@ it('Should return 1000', () => {
   const rom = new RomanNumeral();
   expect(rom.of('M')).toBe(1000);
 });
+
+it('Should return 4', () => {
+  const rom = new RomanNumeral();
+  expect(rom.of('IV')).toBe(4);
+});
+
+it('Should return 9', () => {
+  const rom = new RomanNumeral();
+  expect(rom.of('IV')).toBe(4);
+});
+
+it('Should return 40', () => {
+  const rom = new RomanNumeral();
+  expect(rom.of('XL')).toBe(40);
+});
+
+it('Should return 90', () => {
+  const rom = new RomanNumeral();
+  expect(rom.of('XC')).toBe(90);
+});
