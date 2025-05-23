@@ -14,7 +14,13 @@ export class RomanNumeral {
 
     if (keys.indexOf(value[0]) < keys.indexOf(value[1]))
       return this.ofChar(value[1]) - this.ofChar(value[0]);
-    else return this.ofChar(value);
+    else {
+      const initialization = 0;
+      return Array.from(value).reduce(
+        (accu: any, currentValue: string) => accu + this.ofChar(currentValue),
+        initialization,
+      );
+    }
   }
 
   private ofChar(value: string) {
